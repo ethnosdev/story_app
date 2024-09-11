@@ -25,13 +25,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
-      appBar: AppBar(
-        elevation: 1,
-        centerTitle: true,
-        title: const Text("Bible story"),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 1,
+          centerTitle: true,
+          title: const Text("Bible story"),
+        ),
+        body: ListView.separated(
+          itemBuilder: (context, idx) => StoryListTile(
+            storyNumber: idx + 1,
+            storyTitle: 'Story ${idx + 1}',
+          ),
+          separatorBuilder: (context, idx) => const SizedBox(height: 5),
+          itemCount: 10,
+        ),
       ),
-      body: const StoryApp()),
     );
   }
 }
