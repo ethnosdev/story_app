@@ -8,7 +8,7 @@ class StoryListTile extends StatelessWidget {
     return InkWell(
       onTap: (){print("Click me");},
       child: ListTile(
-            leading: number != null ? Text("$number",style: TextStyle(fontSize: 16)) : null,
+            leading: number != null ? Text("$number ",style: TextStyle(fontSize: 16)) : null,
             title: Text("Story $title",style: TextStyle(fontSize: 16)),
           ),
     );
