@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:story/story_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,12 +31,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         title: const Text("Bible story"),
       ),
-      body: ListView.separated(
-        itemBuilder: (context,idx)=> ListTile(
-          leading: Text("${idx+1}"),
-          title: Text("Story ${idx+1}"),
-        ),
-      separatorBuilder: (context,idx)=>const SizedBox(height: 5,), itemCount: 10),),
+      body: const StoryApp()),
     );
   }
 }
