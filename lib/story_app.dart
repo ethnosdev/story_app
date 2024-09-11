@@ -7,7 +7,7 @@ class StoryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-        itemBuilder: (context,idx)=> StoryListTile(storyNumber: idx+1, storyTitle: "Story ${idx+1}"),
+        itemBuilder: (context,idx)=> StoryListTile(number: idx+1, title: "Story ${idx+1}"),
       separatorBuilder: (context,idx)=>const SizedBox(height: 5,), itemCount: 10);
   }
 }
